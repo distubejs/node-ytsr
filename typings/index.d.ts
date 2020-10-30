@@ -22,6 +22,7 @@ declare module 'ytsr' {
     interface Result {
       query: string;
       items: Video[];
+      results: number;
       continuation: string | null;
     }
   }
