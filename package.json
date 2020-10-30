@@ -1,7 +1,7 @@
 {
-  "name": "ytsr",
-  "version": "1.0.4",
-  "description": "Do anonymous YouTube search requests.",
+  "name": "@distube/ytsr",
+  "version": "0.0.1",
+  "description": "A ytsr fork. Removed unnecessary stuff for DisTube.js.org.",
   "keywords": [
     "youtube",
     "search"
