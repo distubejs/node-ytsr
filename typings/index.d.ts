@@ -15,8 +15,8 @@ declare module 'ytsr' {
       url: string;
       thumbnail: string;
       isLive: boolean;
-      views: number | null;
-      duration: string | null;
+      views: number;
+      duration: string;
     }
 
     interface Result {

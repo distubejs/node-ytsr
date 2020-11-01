@@ -2,7 +2,7 @@
 
 A light-weight ytsr for [DisTube](https://distube.js.org).
 
-Forked from [*ytsr*](https://www.npmjs.com/package/ytsr).
+*Forked from [ytsr](https://www.npmjs.com/package/ytsr).*
 
 # Feature
 - Search for videos on YouTube

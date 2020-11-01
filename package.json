@@ -1,7 +1,7 @@
 {
   "name": "@distube/ytsr",
-  "version": "0.0.1",
-  "description": "A ytsr fork. Removed unnecessary stuff for DisTube.js.org.",
+  "version": "0.0.2",
+  "description": "A ytsr fork. Made for DisTube.js.org.",
   "keywords": [
     "youtube",
     "search"
@@ -50,5 +50,6 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "homepage": "https://github.com/skick1234/node-ytsr#readme"
 }
