@@ -23,7 +23,6 @@ declare module 'ytsr' {
       query: string;
       items: Video[];
       results: number;
-      continuation: string | null;
     }
   }
 
