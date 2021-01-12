@@ -10,6 +10,7 @@ declare module 'ytsr' {
     }
 
     interface Video {
+      type: 'video';
       id: string;
       name: string;
       url: string;
@@ -19,9 +20,17 @@ declare module 'ytsr' {
       duration: string;
     }
 
+    interface Playlist {
+      type: 'playlist';
+      id: string;
+      name: string;
+      url: string;
+      length: number;
+    }
+
     interface Result {
       query: string;
-      items: Video[];
+      items: Video[] | Playlist[];
       results: number;
     }
   }
