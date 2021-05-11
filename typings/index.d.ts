@@ -7,6 +7,13 @@ declare module 'ytsr' {
       hl?: string;
       gl?: string;
       utcOffsetMinutes?: number;
+      type: 'video' | 'playlist';
+    }
+
+    interface Image {
+      url: string | null;
+      width: number;
+      height: number;
     }
 
     interface Video {
@@ -18,6 +25,15 @@ declare module 'ytsr' {
       isLive: boolean;
       views: number;
       duration: string;
+      author: {
+        name: string;
+        channelID: string;
+        url: string;
+        bestAvatar: Image;
+        avatars: Image[];
+        ownerBadges: string[];
+        verified: boolean;
+      } | null;
     }
 
     interface Playlist {
@@ -26,6 +42,13 @@ declare module 'ytsr' {
       name: string;
       url: string;
       length: number;
+      owner: {
+        name: string;
+        channelID: string;
+        url: string;
+        ownerBadges: string[];
+        verified: boolean;
+      } | null;
     }
 
     interface Result {
