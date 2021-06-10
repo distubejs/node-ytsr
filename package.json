@@ -1,6 +1,6 @@
 {
   "name": "@distube/ytsr",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A ytsr fork. Made for DisTube.js.org.",
   "keywords": [
     "youtube",
@@ -41,7 +41,7 @@
     "codecov": "^3.8.2",
     "dtslint": "^4.1.0",
     "eslint": "^7.28.0",
-    "mocha": "^8.4.0",
+    "mocha": "^9.0.0",
     "nock": "^13.1.0",
     "nyc": "^15.1.0",
     "tslint": "^6.1.2",

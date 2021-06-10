@@ -1,4 +1,4 @@
-declare module 'ytsr' {
+declare module '@distube/ytsr' {
   namespace ytsr {
     interface Options {
       safeSearch?: boolean;
