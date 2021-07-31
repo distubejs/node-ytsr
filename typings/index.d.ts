@@ -7,7 +7,7 @@ declare module '@distube/ytsr' {
       hl?: string;
       gl?: string;
       utcOffsetMinutes?: number;
-      type: 'video' | 'playlist';
+      type?: 'video' | 'playlist';
     }
 
     interface Image {
@@ -51,15 +51,22 @@ declare module '@distube/ytsr' {
       } | null;
     }
 
-    interface Result {
+    interface VideoResult {
       query: string;
-      items: Video[] | Playlist[];
+      items: Video[];
+      results: number;
+    }
+
+    interface PlaylistResult {
+      query: string;
+      items: Playlist[];
       results: number;
     }
   }
 
-  function ytsr(id: string): Promise<ytsr.Result>;
-  function ytsr(id: string, options: ytsr.Options): Promise<ytsr.Result>;
+  function ytsr(id: string): Promise<ytsr.VideoResult>;
+  function ytsr(id: string, options: ytsr.Options & { type?: 'video' }): Promise<ytsr.VideoResult>;
+  function ytsr(id: string, options: ytsr.Options & { type: 'playlist' }): Promise<ytsr.PlaylistResult>;
 
   export = ytsr;
 }
