@@ -65,8 +65,8 @@ declare module '@distube/ytsr' {
   }
 
   function ytsr(id: string): Promise<ytsr.VideoResult>;
-  function ytsr(id: string, options: ytsr.Options & { type?: 'video' }): Promise<ytsr.VideoResult>;
   function ytsr(id: string, options: ytsr.Options & { type: 'playlist' }): Promise<ytsr.PlaylistResult>;
+  function ytsr(id: string, options: ytsr.Options): Promise<ytsr.VideoResult>;
 
   export = ytsr;
 }

@@ -1,6 +1,6 @@
 {
   "name": "@distube/ytsr",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A ytsr fork. Made for DisTube.js.org.",
   "keywords": [
     "youtube",
@@ -26,12 +26,7 @@
   ],
   "scripts": {
     "lint": "eslint ./",
-    "lint:fix": "eslint --fix ./",
-    "lint:typings": "tslint typings/index.d.ts",
-    "lint:typings:fix": "tslint --fix typings/index.d.ts",
-    "mocha": "mocha -- -t 16000 test/*-test.js",
-    "nyc": "nyc --reporter=lcov npm run-script mocha",
-    "test": "npm run-script nyc && codecov"
+    "lint:fix": "eslint --fix ./"
   },
   "dependencies": {
     "miniget": "^4.2.1"
