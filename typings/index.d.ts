@@ -1,4 +1,4 @@
-declare module '@distube/ytsr' {
+declare module "@distube/ytsr" {
   namespace ytsr {
     interface Options {
       safeSearch?: boolean;
@@ -7,7 +7,8 @@ declare module '@distube/ytsr' {
       hl?: string;
       gl?: string;
       utcOffsetMinutes?: number;
-      type?: 'video' | 'playlist';
+      type?: "video" | "playlist";
+      requestOptions?: { [key: string]: object } & { headers?: { [key: string]: string } };
     }
 
     interface Image {
@@ -17,12 +18,16 @@ declare module '@distube/ytsr' {
     }
 
     interface Video {
-      type: 'video';
+      type: "video";
       id: string;
       name: string;
       url: string;
       thumbnail: string;
+      thumbnails: Image[];
+      isUpcoming: boolean;
+      upcoming: number | null;
       isLive: boolean;
+      badges: string[];
       views: number;
       duration: string;
       author: {
@@ -37,7 +42,7 @@ declare module '@distube/ytsr' {
     }
 
     interface Playlist {
-      type: 'playlist';
+      type: "playlist";
       id: string;
       name: string;
       url: string;
@@ -49,6 +54,7 @@ declare module '@distube/ytsr' {
         ownerBadges: string[];
         verified: boolean;
       } | null;
+      publishedAt: string | null;
     }
 
     interface VideoResult {
@@ -65,7 +71,11 @@ declare module '@distube/ytsr' {
   }
 
   function ytsr(id: string): Promise<ytsr.VideoResult>;
-  function ytsr(id: string, options: ytsr.Options & { type: 'playlist' }): Promise<ytsr.PlaylistResult>;
+  function ytsr(id: string, options: ytsr.Options & { type: "playlist" }): Promise<ytsr.PlaylistResult>;
+  function ytsr(
+    id: string,
+    options: ytsr.Options & { type: "video" | "playlist" }
+  ): Promise<ytsr.VideoResult | ytsr.PlaylistResult>;
   function ytsr(id: string, options: ytsr.Options): Promise<ytsr.VideoResult>;
 
   export = ytsr;
