@@ -7,11 +7,11 @@
     "search"
   ],
   "bugs": {
-    "url": "https://github.com/skick1234/node-ytsr/issues"
+    "url": "https://github.com/distubejs/ytsr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/skick1234/node-ytsr.git"
+    "url": "git://github.com/distubejs/ytsr.git"
   },
   "license": "MIT",
   "author": "Skick (https://github.com/skick1234)",
@@ -37,5 +37,5 @@
   "engines": {
     "node": ">=8"
   },
-  "homepage": "https://github.com/skick1234/node-ytsr#readme"
+  "homepage": "https://github.com/distubejs/ytsr#readme"
 }
