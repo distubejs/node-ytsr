@@ -50,7 +50,7 @@ Searches for the given string
     * safeSearch[Boolean] -> pull items in youtube restriction mode.
     * limit[integer] -> limits the pulled items, defaults to 100, set to Infinity to get the whole list of search results - numbers <1 result in the default being used
     * type[String] -> filter for a specific type of item, defaults to `video` - possible values: `video`, `playlist`
-    * requestOptions[Object] -> Additional parameters to passed to [miniget](https://github.com/fent/node-miniget), which is used to do the https requests
+    * requestOptions[Object] -> Additional parameters to passed to undici's [request options](https://github.com/nodejs/undici#undicirequesturl-options-promise), which is used to do the https requests
 
 * returns a Promise
 * [Example response](#example-response)
