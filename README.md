@@ -3,6 +3,7 @@
 A light-weight ytsr for [DisTube](https://distube.js.org). Original [ytsr](https://www.npmjs.com/package/ytsr).
 
 # Feature
+
 - Search for videos on YouTube
 - Only support `video` and `playlist` type
 
@@ -14,14 +15,14 @@ The response is modified from the original ytsr response. See [Example Response]
 const ytsr = require('@distube/ytsr');
 
 ytsr('DisTube', { safeSearch: true, limit: 1 }).then(result => {
-    let song = result.items[0];
-    console.log('ID: ' + song.id);
-    console.log('Name: ' + song.name);
-    console.log('URL: ' + song.url);
-    console.log('Views: ' + song.views);
-    console.log('Duration: ' + song.duration);
-    console.log('Live: ' + song.isLive);
-})
+  let song = result.items[0];
+  console.log('ID: ' + song.id);
+  console.log('Name: ' + song.name);
+  console.log('URL: ' + song.url);
+  console.log('Views: ' + song.views);
+  console.log('Duration: ' + song.duration);
+  console.log('Live: ' + song.isLive);
+});
 
 /*
 ID: Bk7RVw3I8eg
@@ -39,21 +40,30 @@ Live: false
 
 Searches for the given string
 
-* `searchString`
-    * search string or url (from getFilters) to search from
-* `options`
-    * object with options
-    * possible settings:
-    * gl[String] -> 2-Digit Code of a Country, defaults to `US` - Allows for localisation of the request
-    * hl[String] -> 2-Digit Code for a Language, defaults to `en` - Allows for localisation of the request
-    * utcOffsetMinutes[Number] -> Offset in minutes from UTC, defaults to `-300` - Allows for localisation of the request
-    * safeSearch[Boolean] -> pull items in youtube restriction mode.
-    * limit[integer] -> limits the pulled items, defaults to 100, set to Infinity to get the whole list of search results - numbers <1 result in the default being used
-    * type[String] -> filter for a specific type of item, defaults to `video` - possible values: `video`, `playlist`
-    * requestOptions[Object] -> Additional parameters to passed to undici's [request options](https://github.com/nodejs/undici#undicirequesturl-options-promise), which is used to do the https requests
+- `searchString`
+  - search string or url (from getFilters) to search from
+- `options`
 
-* returns a Promise
-* [Example response](#example-response)
+  - object with options
+  - possible settings:
+  - gl[String] -> 2-Digit Code of a Country, defaults to `US` - Allows for localisation of the request
+  - hl[String] -> 2-Digit Code for a Language, defaults to `en` - Allows for localisation of the request
+  - utcOffsetMinutes[Number] -> Offset in minutes from UTC, defaults to `-300` - Allows for localisation of the request
+  - safeSearch[Boolean] -> pull items in youtube restriction mode.
+  - limit[integer] -> limits the pulled items, defaults to 100, set to Infinity to get the whole list of search results - numbers <1 result in the default being used
+  - type[String] -> filter for a specific type of item, defaults to `video` - possible values: `video`, `playlist`
+  - requestOptions[Object] -> Additional parameters to passed to undici's [request options](https://github.com/nodejs/undici#undicirequesturl-options-promise), which is used to do the https requests
+
+- returns a Promise
+- [Example response](#example-response)
+
+## Update Checks
+
+If you'd like to disable update check, you can do so by providing the `YTSR_NO_UPDATE` env variable.
+
+```
+env YTSR_NO_UPDATE=1 node myapp.js
+```
 
 ## Example Response
 

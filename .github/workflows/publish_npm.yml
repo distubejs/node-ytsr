@@ -1,5 +1,5 @@
-name: Publish @distube/ytdl-core
-on:  
+name: Publish @distube/ytsr
+on:
   push:
     tags:
       - '*'
@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: "https://registry.npmjs.org"
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm i
@@ -26,6 +26,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Deprecate older versions
-        run: npm deprecate @distube/ytdl-core@"< ${{ github.ref_name }}" "This version is deprecated, please upgrade to the latest version."
+        run: npm deprecate @distube/ytsr@"< ${{ github.ref_name }}" "This version is deprecated, please upgrade to the latest version."
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
