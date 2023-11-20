@@ -29,13 +29,14 @@
     "lint:fix": "eslint --fix ./"
   },
   "dependencies": {
-    "undici": "^5.25.2"
+    "undici": "^5.27.2"
   },
   "devDependencies": {
-    "eslint": "^8.49.0"
+    "eslint": "^8.54.0"
   },
   "engines": {
     "node": ">=8"
   },
-  "homepage": "https://github.com/distubejs/ytsr#readme"
+  "homepage": "https://github.com/distubejs/ytsr#readme",
+  "funding": "https://github.com/distubejs/ytsr?sponsor=1"
 }
