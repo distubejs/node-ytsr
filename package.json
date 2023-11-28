@@ -30,7 +30,7 @@
     "lint:fix": "eslint --fix ./"
   },
   "dependencies": {
-    "undici": "^5.27.2"
+    "undici": "^5.28.1"
   },
   "devDependencies": {
     "eslint": "^8.54.0",
