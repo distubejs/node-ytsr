@@ -17,6 +17,9 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Lint
+        run: npm i && npm run lint
+
       - name: Publish
         run: npm publish
         env:
