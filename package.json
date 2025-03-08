@@ -1,23 +1,19 @@
 {
-  "name": "@distube/ytsr",
-  "version": "2.0.4",
-  "description": "A ytsr fork. Made for DisTube.js.org.",
+  "name": "@rofly/ytsr",
+  "version": "2.1.0",
+  "description": "A runtime agnostic fork of @distube/ytsr",
   "keywords": [
     "youtube",
     "search"
   ],
   "bugs": {
-    "url": "https://github.com/distubejs/ytsr/issues"
+    "url": "https://github.com/rofly/ytsr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/distubejs/ytsr.git"
+    "url": "git://github.com/rofly/ytsr.git"
   },
   "license": "MIT",
-  "author": "Skick (https://github.com/skick1234)",
-  "contributors": [
-    "Tobias Kutscha (https://github.com/TimeForANinja)"
-  ],
   "main": "./lib/main.js",
   "types": "./typings/index.d.ts",
   "files": [
@@ -39,6 +35,5 @@
   "engines": {
     "node": ">=14.0"
   },
-  "homepage": "https://github.com/distubejs/ytsr#readme",
   "funding": "https://github.com/distubejs/ytsr?sponsor"
 }
